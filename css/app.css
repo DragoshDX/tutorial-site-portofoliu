@@ -4,13 +4,21 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
+/* these are not the only button types */
 button,
 input[type='button'],
 input[type='reset'],
@@ -19,6 +27,11 @@ input[type='submit'] {
   font-family: inherit;
   cursor: pointer;
   color: inherit;
+  background: transparent;
+}
+
+textarea {
+  font-family: 'Rubik', sans-serif;
 }
 
 /* reset end */
@@ -27,9 +40,12 @@ input[type='submit'] {
 :root {
   --accent1: #ffb900;
   --accent2: #5d458c;
-  --darkened-accent1: color-mix(in srgb, var(--accent1) 85%, #000);
+  --darkened-accent1: color-mix(in srgb, var(--accent1) 85%, var(--black));
   --main: #2d1b50;
   --white: #fff;
+  --black: #000;
+  --gray-200: color-mix(in srgb, var(--gray-500) 20%, var(--white));
+  --gray-500: #757575;
 
   --body-copy-size: 18px;
   --body-line-height: 22px;
@@ -56,13 +72,17 @@ input[type='submit'] {
   font-size: 30px;
   line-height: 36px;
 }
+/* headings */
 
+/* cards */
 .card {
   border: 1px solid var(--accent2);
   border-radius: 8px;
   padding: 8px;
 }
+/* cards */
 
+/* buttons */
 .button {
   display: inline-flex;
   height: 50px;
@@ -81,6 +101,18 @@ input[type='submit'] {
   padding-right: 18px;
 }
 
+.button.button-disabled {
+  background: var(--gray-500);
+  border-color: var(--gray-200);
+  opacity: 0.6;
+}
+
+.button.button-disabled:hover {
+  cursor: not-allowed;
+  background: var(--gray-500);
+  border-color: var(--gray-200);
+}
+
 .button-primary {
   background: var(--accent1);
   border-radius: 28px;
@@ -92,7 +124,20 @@ input[type='submit'] {
   border-color: var(--darkened-accent1);
 }
 
-input:not([type='checkbox']):not([type='radio']) {
+.button-primary-outline {
+  border: 2px solid var(--accent1);
+  border-radius: 28px;
+}
+
+.button-primary-outline:hover {
+  background: var(--darkened-accent1);
+  border-color: var(--darkened-accent1);
+}
+/* buttons */
+
+/* form inputs */
+input:not([type='checkbox']):not([type='radio']),
+textarea.form-control {
   border: 1px solid var(--accent1);
   height: 50px;
   background: transparent;
@@ -102,8 +147,24 @@ input:not([type='checkbox']):not([type='radio']) {
   border-radius: 6px;
 }
 
-input:not([type='checkbox']):not([type='radio']):focus-visible {
+input:not([type='checkbox']):not([type='radio']):focus-visible,
+textarea.form-control:focus-visible {
   outline: var(--darkened-accent1) solid 2px;
+}
+
+/* there are many many more types of inputs */
+input:not([type='checkbox']):not([type='radio']):disabled,
+textarea.form-control:disabled {
+  border-color: var(--gray-200);
+  background: var(--gray-500);
+  color: var(--gray-200);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input:not([type='checkbox']):not([type='radio']):disabled::placeholder,
+textarea.form-control:disabled::placeholder {
+  color: var(--gray-200);
 }
 
 input:-webkit-autofill,
@@ -114,6 +175,78 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px var(--accent2) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+textarea.form-control {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+textarea.form-control:disabled {
+  resize: none;
+}
+
+select.form-control {
+  border: 1px solid var(--accent1);
+  height: 50px;
+  background: transparent;
+  padding: 0 8px;
+  font-size: var(--body-copy-size);
+  color: var(--accent1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+select.form-control option {
+  color: initial;
+}
+
+select.form-control:focus-visible {
+  outline: var(--darkened-accent1) solid 2px;
+}
+
+select.form-control:disabled {
+  border-color: var(--gray-200);
+  background: var(--gray-500);
+  color: var(--gray-200);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/* form inputs */
+
+/* hamburger */
+.hamburger {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  gap: 4px;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger > span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent1);
+  display: block;
+  border-radius: 1px;
+  transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.hamburger.open > span:nth-child(1) {
+  transform: translateX(3px) rotate(45deg);
+  transform-origin: center left;
+}
+
+.hamburger.open > span:nth-child(2) {
+  transform: translateY(1px) rotate(-45deg);
+}
+
+.hamburger.open > span:nth-child(3) {
+  opacity: 0;
+}
+/* hamburger */
 
 /* generic style-guide layout */
 .sg .header {
@@ -138,10 +271,108 @@ input:-webkit-autofill:focus {
 /* general */
 body {
   background: var(--main);
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   color: var(--white);
   font-size: var(--body-copy-size);
   line-height: var(--body-line-height);
 }
 
 /* general end */
+
+/* header */
+.header {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  place-items: center center;
+}
+
+.header-logo {
+  display: inline-block;
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;
+}
+
+.header-hamburger {
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+
+#off-canvas {
+  display: none;
+}
+
+#off-canvas:checked ~ .header-hamburger .hamburger > span:nth-child(1) {
+  transform: translateX(3px) rotate(45deg);
+  transform-origin: center left;
+}
+
+#off-canvas:checked ~ .header-hamburger .hamburger > span:nth-child(2) {
+  transform: translateY(1px) rotate(-45deg);
+}
+
+#off-canvas:checked ~ .header-hamburger .hamburger > span:nth-child(3) {
+  opacity: 0;
+}
+
+.header-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: calc(-100vh + 95px);
+  transition: transform 0.2s ease-in-out, broder-color 0.2s linear;
+  background: var(--main);
+  z-index: -1;
+  border-bottom: 1px dashed var(--accent1);
+  padding-top: 64px;
+}
+
+.header-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  font-size: 24px;
+  text-transform: lowercase;
+}
+
+#off-canvas:checked ~ .header-nav {
+  transform: translateY(calc(100vh));
+  border-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    border-bottom: 1px dashed var(--accent1);
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-nav {
+    border: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .header-nav ul {
+    flex-direction: row;
+    font-size: 20px;
+    gap: 40px;
+  }
+
+  .header-hamburger {
+    display: none;
+  }
+}
+
+/* header */

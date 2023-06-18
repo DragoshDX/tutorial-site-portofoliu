@@ -95,6 +95,19 @@
             </p>
           </div>
 
+
+          <div style="padding: 12px; text-align: center">
+            <span class="card">
+              <i class="ph ph-caret-left"></i>
+            </span>
+
+            <br> <br>
+
+            <p>
+              &lt;i class="ph ph-caret-right"&gt;&lt;/i&gt;
+            </p>
+          </div>
+
           <div style="padding: 12px; text-align: center">
             <span class="card">
               <i class="ph ph-caret-down"></i>
@@ -136,29 +149,24 @@
 
           <br>
 
-          <a
-            href="/"
-            class="button button-primary"
-          >button-primary</a>
+          <a class="button button-primary">button-primary</a>
 
           &nbsp; &nbsp; &nbsp;
 
-          <a
-            href="/"
-            class="button button-primary icon-left"
-          >
+          <a class="button button-primary icon-left">
             <i class="ph ph-caret-left"></i>
             button-primary
           </a>
           &nbsp; &nbsp; &nbsp;
 
-          <a
-            href="/"
-            class="button button-primary icon-right"
-          >
+          <a class="button button-primary icon-right">
             button-primary
             <i class="ph ph-caret-right"></i>
           </a>
+
+          &nbsp; &nbsp; &nbsp;
+
+          <a class="button button-primary button-disabled">disabled</a>
         </div>
 
         <br>
@@ -181,7 +189,62 @@
             button-primary
             <i class="ph ph-caret-right"></i>
           </button>
+          &nbsp;&nbsp;&nbsp;
+          <button
+            class="button button-primary button-disabled"
+            disabled
+          >disabled</button>
+        </div>
 
+        <br>
+
+        <div class="card">
+          <h2 class="heading">
+            primary outline anchors
+          </h2>
+
+          <br>
+
+          <a class="button button-primary-outline">button-primary</a>
+          &nbsp; &nbsp; &nbsp;
+          <a class="button button-primary-outline icon-left">
+            <i class="ph ph-caret-left"></i>
+            button-primary
+          </a>
+          &nbsp; &nbsp; &nbsp;
+          <a class="button button-primary-outline icon-right">
+            button-primary
+            <i class="ph ph-caret-right"></i>
+          </a>
+          &nbsp; &nbsp; &nbsp;
+          <a class="button button-primary-outline button-disabled">button-primary</a>
+        </div>
+
+        <br>
+
+        <div class="card">
+          <h2 class="heading">
+            primary outline buttons
+          </h2>
+
+          <br>
+
+          <button class="button button-primary-outline">button-primary</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="button button-primary-outline icon-left">
+            <i class="ph ph-caret-left"></i>
+            button-primary
+          </button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="button button-primary-outline icon-right">
+            button-primary
+            <i class="ph ph-caret-right"></i>
+          </button>
+          &nbsp;&nbsp;&nbsp;
+          <button
+            class="button button-primary-outline button-disabled"
+            disabled
+          >button-primary</button>
         </div>
       </section>
 
@@ -197,19 +260,154 @@
           <input
             type="text"
             class="form-control"
+            placeholder="Test placeholder"
           >
           &nbsp; &nbsp; &nbsp;
           <input
             type="email"
             name="email"
             class="form-control"
+            value="Prefilled"
           >
           &nbsp; &nbsp; &nbsp;
           <input
             type="password"
             class="form-control"
+            placeholder="Test placeholder"
+          >
+          &nbsp; &nbsp; &nbsp;
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Disabled text input"
+            disabled
+          >
+
+          <br> <br>
+
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            value="Prefilled"
+            disabled
           >
         </form>
+
+        <br> <br> <br>
+
+        <p class="sub-heading">
+          Textareas
+        </p>
+
+        <br> <br>
+
+        <form class="card">
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Test placeholder"
+          ></textarea>
+          &nbsp; &nbsp; &nbsp;
+          <textarea
+            type="email"
+            name="email"
+            class="form-control"
+          >Prefilled textarea</textarea>
+          &nbsp; &nbsp; &nbsp;
+          <textarea
+            type="password"
+            class="form-control"
+            placeholder="Test placeholder"
+          ></textarea>
+          &nbsp; &nbsp; &nbsp;
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Disabled textarea input"
+            disabled
+          ></textarea>
+
+          <br> <br>
+
+          <textarea
+            type="email"
+            name="email"
+            class="form-control"
+            disabled
+          >Prefilled disabled textarea</textarea>
+        </form>
+
+        <br> <br> <br>
+
+        <p class="sub-heading">
+          Select inputs
+        </p>
+
+        <br> <br>
+
+        <form class="card">
+          <select class="form-control">
+            <option value="">-- please select --</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Twitch</option>
+          </select>
+          &nbsp; &nbsp; &nbsp;
+          <select class="form-control">
+            <option value="">-- please select --</option>
+            <option
+              value="1"
+              selected
+            >One</option>
+            <option value="2">Two</option>
+            <option value="3">Twitch</option>
+          </select>
+          &nbsp; &nbsp; &nbsp;
+          <select
+            class="form-control"
+            disabled
+          >
+            <option value="">-- please select --</option>
+            <option
+              value="1"
+              selected
+            >One</option>
+            <option value="2">Two</option>
+            <option value="3">Twitch</option>
+          </select>
+        </form>
+      </section>
+
+      <section class="components">
+        <h1 class="heading">Components</h1>
+        <p class="sub-heading">
+          Hamburger menu
+        </p>
+
+        <br> <br>
+
+        <div class="card">
+          <span
+            class="hamburger"
+            title="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <span
+            class="hamburger open"
+            title="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
       </section>
     </main>
   </div>
