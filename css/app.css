@@ -293,8 +293,10 @@ body {
 .header {
   padding: 28px 0;
   text-align: center;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
+  background: var(--main);
 }
 
 .header-inner {
@@ -445,6 +447,7 @@ body {
 /* homepage */
 .content {
   margin-bottom: 216px;
+  padding-top: 88px;
 }
 
 .banner-main {
@@ -721,6 +724,18 @@ body {
     width: 25%;
     align-self: center;
   }
+}
+
+.home-social ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.home-social ul img {
+  width: 38px;
+  height: 38px;
+  display: block;
 }
 
 /* homepage end */
