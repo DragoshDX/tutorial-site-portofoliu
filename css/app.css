@@ -283,6 +283,7 @@ body {
   color: var(--white);
   font-size: var(--body-copy-size);
   line-height: var(--body-line-height);
+  font-weight: 300;
 }
 
 /* general end */
@@ -452,6 +453,7 @@ body {
   text-align: center;
   overflow: hidden;
   padding-top: 320px;
+  margin-bottom: 50px;
 }
 
 .banner-main .banner-line-1 {
@@ -496,6 +498,7 @@ body {
     padding-top: 0;
     text-align: left;
     background-image: url('../images/hi-res-banner.jpg');
+    margin-bottom: 90px;
   }
 
   .banner-main > .container {
@@ -548,4 +551,16 @@ body {
     height: 30px;
   }
 }
+
+.content-main > section > header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-about .section-content {
+  width: 52.672955%; /* 670 / 1272 * 100 = 52.672955 */
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* homepage end */
