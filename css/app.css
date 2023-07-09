@@ -247,12 +247,14 @@ select.form-control:disabled {
   opacity: 0;
 }
 /* hamburger */
+
 @media (min-width: 1024px) {
   .container {
     padding-left: 0;
     padding-right: 0;
   }
 }
+
 /* generic style-guide layout */
 .sg .header {
   margin: 36px 0;
@@ -271,6 +273,7 @@ select.form-control:disabled {
   grid-template-columns: repeat(4, 1fr);
 }
 /* generic style-guide layout end */
+
 /* style-guide end */
 
 /* general */
@@ -364,6 +367,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 24px;
   }
 
   .header-nav {
@@ -397,16 +401,19 @@ body {
   font-weight: 300;
   text-align: center;
 }
+
 .footer-separator {
   border-bottom: 1px dashed var(--accent1);
   margin: 12px auto;
 }
+
 .footer-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
 }
+
 .footer-nav a {
   text-transform: uppercase;
   display: inline-block;
@@ -414,25 +421,30 @@ body {
   padding: 4px 12px;
   border-radius: 18px;
 }
+
 @media (min-width: 1024px) {
   .footer-nav ul {
     gap: 16px;
   }
+
   .footer-nav a {
     display: inline;
     border: 0;
     padding: 0;
   }
+
   .footer-separator {
     width: 100%;
     max-width: 1272px;
   }
 }
 /* footer end */
+
 /* homepage */
 .content {
   margin-bottom: 216px;
 }
+
 .banner-main {
   height: 500px;
   background: var(--main) url('../images/low-res-banner.jpg') no-repeat center
@@ -441,23 +453,99 @@ body {
   overflow: hidden;
   padding-top: 320px;
 }
+
 .banner-main .banner-line-1 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin-bottom: 4px;
 }
+
 .banner-main .banner-line-1 > span {
   font-weight: 700;
 }
+
 .banner-main .banner-line-2 {
   font-weight: 300;
 }
+
 .banner-main .banner-line-2 > span {
   font-weight: 500;
 }
+
 .banner-main .banner-ctas {
   margin-top: 20px;
   text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.banner-main .banner-ctas a:first-child {
+  display: none;
+}
+
+.banner-main .banner-social {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .banner-main {
+    height: 564px;
+    padding-left: 180px;
+    padding-top: 0;
+    text-align: left;
+    background-image: url('../images/hi-res-banner.jpg');
+  }
+
+  .banner-main > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    position: relative;
+  }
+
+  .banner-main .banner-line-1 {
+    line-height: 57px;
+    font-size: 48px;
+    font-weight: 300;
+  }
+
+  .banner-main .banner-line-2 {
+    line-height: 36px;
+    font-size: 30px;
+    opacity: 0.7;
+  }
+
+  .banner-main .banner-ctas {
+    justify-content: flex-start;
+  }
+
+  .banner-main .banner-ctas a:first-child {
+    display: inline-flex;
+  }
+
+  .banner-main .banner-social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .banner-main .banner-social ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .banner-main .banner-social li {
+    display: inline;
+  }
+
+  .banner-main .banner-social a {
+    display: block;
+    height: 30px;
+  }
 }
 /* homepage end */

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="linkedin_circle" transform="translate(14425 7418)">
+    <rect id="Rectangle_2071" data-name="Rectangle 2071" width="30" height="30" transform="translate(-14425 -7418)" fill="none"/>
+    <g id="Group_6689" data-name="Group 6689" transform="translate(-14423.75 -7416.75)">
+      <path id="Path_5885" data-name="Path 5885" d="M139.174,78.384a1.219,1.219,0,1,1-1.219,1.219,1.219,1.219,0,0,1,1.219-1.219" transform="translate(-129.077 -69.512)" fill="#ffb900"/>
+      <rect id="Rectangle_2067" data-name="Rectangle 2067" width="2.439" height="6.707" transform="translate(8.878 11.92)" fill="#ffb900"/>
+      <path id="Path_5886" data-name="Path 5886" d="M145.087,71.77a13.75,13.75,0,1,0,13.75,13.75,13.769,13.769,0,0,0-13.75-13.75m0,25.609A11.859,11.859,0,1,1,156.946,85.52a11.871,11.871,0,0,1-11.859,11.859" transform="translate(-131.337 -71.77)" fill="#ffb900"/>
+      <path id="Path_5887" data-name="Path 5887" d="M145.169,80.656c-1.83,0-2.048,1.085-2.048,1.085V80.656h-2.439v6.707h2.439V83.705s0-1.219,1.037-1.219c.61,0,.793.537.793,1.219v3.658h2.439V83.705c0-1.909-.829-3.049-2.22-3.049" transform="translate(-128.146 -68.736)" fill="#ffb900"/>
+    </g>
+  </g>
+</svg>
